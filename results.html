@@ -145,12 +145,12 @@
     equality = smart_data[2][1]  // OUTCOME
     gov = smart_data[2][0]       // DEMOCRACY
     foreign = smart_data[2][2]   // GLOBALISM
-    score = [eco + freedom + culture + equality + gov + foreign] / 6 / 1000.0
+    score = [eco + freedom + culture + equality + gov + foreign] / 6 / 1000.0;
     console.log(smart_data);
     console.log(score);
     // var xxx = d3.scaleLinear();
     var scale = d3.scaleLinear().domain([0, 1]).range([80, 200]);
-    console.log(scale)
+    console.log(scale())
 
 	function getClassification(index)
 	{
