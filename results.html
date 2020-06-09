@@ -8,7 +8,8 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-63376867-5');
-    </script>
+    </script>
+
 	<meta charset="UTF-8" />
 	<link rel="shortcut icon" type="image/x-icon" href="icons/favicon.ico"/>
 	<title>Political IQ</title>
@@ -16,12 +17,17 @@
 		body {
 			font-family: Arial;
 		  }
-		a[href] {
-			color: #1e8ad6;
-		}
+		a[href] {
+
+			color: #1e8ad6;
+
+		}
+
 		
-		a[href]:hover {
-			color: #3ba0e6;
+		a[href]:hover {
+
+			color: #3ba0e6;
+
 		}
 	</style>
 </head>
@@ -131,7 +137,17 @@
            smart_data.push(temp);
         }
     }
+    eco = smart_data[2][1]       // REGULATION 
+    freedom = smart_data[2][2]   // TRUTH
+    culture = smart_data[2][1]   // PROGRESS
+    equality = smart_data[2][1]  // OUTCOME
+    gov = smart_data[2][0]       // DEMOCRACY
+    foreign = smart_data[2][2]   // GLOBALISM
+    score = [eco + freedom + culture + equality + gov + foreign + score] / 6 / 1000.0
     console.log(smart_data);
+    console.log(score) 
+    var scale = d3.scale.linear().domain([0, 1]).range([80, 200]);
+    console.log(scale)
 
 	function getClassification(index)
 	{
