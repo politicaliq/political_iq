@@ -124,22 +124,22 @@
     center = d3.select('body').append('center')
     
 
-    cell.append('h1').text("Your IQ is: " + string(scale(score)))
+    center.append('h1').text("Your IQ is: " + string(scale(score)))
     if (scale(score) < 90) {
-        cell.append('h3').text("wow... that's kinda low, sport");
+        center.append('h3').text("wow... that's kinda low, sport");
     } else if (scale(score) < 100) {
-        cell.append('h3').text("ummm... that's not very good. duuhhhh.");
+        center.append('h3').text("ummm... that's not very good. duuhhhh.");
     } else if (scale(score) < 120) {
-        cell.append('h3').text("meh. average");
+        center.append('h3').text("meh. average");
     } else if (scale(score) < 140) {
-        cell.append('h3').text("ok ur pretty smart");
+        center.append('h3').text("ok ur pretty smart");
     } else if (scale(score) < 160) {
-        cell.append('h3').text("wow");
+        center.append('h3').text("wow");
     } else if (scale(score) <= 200) {
-        cell.append('h3').text("what. the. fuck. who are you? are you jesus??");
+        center.append('h3').text("what. the. fuck. who are you? are you jesus??");
     }
-    cell.append('h1').text("Your Politcal IQ Score is: " + string(score))
-    cell.append('h3').text("This can be between 0 and 1. 1 is the best political score and 0 is the worst.")
+    center.append('h1').text("Your Politcal IQ Score is: " + string(score))
+    center.append('h3').text("This can be between 0 and 1. 1 is the best political score and 0 is the worst.")
 
 
     table = center.append('table').attr('width',"90%").style('text-align','center')
