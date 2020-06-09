@@ -116,7 +116,7 @@
     console.log([eco, freedom, culture, equality, gov, foreign]);
     console.log(score);
     // var xxx = d3.scaleLinear();
-    var scale = d3.scaleLinear().domain([0, 1]).range([80, 200]);
+    var scale = d3.scaleLinear().domain([0, 1]).range([0, 200]);
     console.log(scale(score))
 
 
@@ -126,7 +126,7 @@
 
     center.append('h1').text("Your IQ is: " + scale(score)).style('color', "white");
     if (scale(score) < 90) {
-        center.append('h3').text("wow... that's kinda low, sport").style('color', "white");
+        center.append('h3').text("wow... that's kinda low, buddy").style('color', "white");
     } else if (scale(score) < 100) {
         center.append('h3').text("ummm... that's not very good. duuhhhh.").style('color', "white");
     } else if (scale(score) < 120) {
