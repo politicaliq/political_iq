@@ -118,7 +118,21 @@
 		t = r(-side*data[i][0]/2000+side*data[i][1]/2000,size*(data[i][0]+data[i][1])/1000);
 		svg.append('circle').attr('r',datarad).attr('cx',t[0]).attr('cy',t[1]).attr('fill',"white").style('stroke','black');
 	}
-	table = center.append('table').attr('width',"90%").style('text-align','center')
+    table = center.append('table').attr('width',"90%").style('text-align','center')
+    
+    smart_data = []
+    for (i = 0; i < 6; i+=3) {
+		for (p = 0; p < 3; p++) {
+			j = p;
+			if (i == 3) {
+                j = 2 - p;
+            }
+           temp = data[i + j].slice();
+           smart_data.push(temp);
+        }
+    }
+    console.log(smart_data);
+
 	function getClassification(index)
 	{
 		temp = data[index].slice()
