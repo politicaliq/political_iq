@@ -12,8 +12,6 @@
 
     <script src="d3-scale.v3.min.js"></script>
 
-    var xxx = d3.scaleLinear();
-
 	<meta charset="UTF-8" />
 	<link rel="shortcut icon" type="image/x-icon" href="icons/favicon.ico"/>
 	<title>Political IQ</title>
@@ -150,6 +148,7 @@
     score = [eco + freedom + culture + equality + gov + foreign] / 6 / 1000.0
     console.log(smart_data);
     console.log(score) 
+    var xxx = d3.scaleLinear();
     var scale = xxx.scale.linear().domain([0, 1]).range([80, 200]);
     console.log(scale)
 
