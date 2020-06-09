@@ -122,9 +122,8 @@
 
 	
     center = d3.select('body').append('center')
-    
 
-    center.append('h1').text("Your IQ is: " + Math.round(scale(score), 2)).style('color', "white");
+    center.append('h1').text("Your IQ is: " + Number((scale(score)).toFixed(2))).style('color', "white");
     if (scale(score) < 50) {
         center.append('h3').text("wow... that's kinda low, buddy").style('color', "white");
     } else if (scale(score) < 100) {
@@ -138,7 +137,7 @@
     } else if (scale(score) <= 200) {
         center.append('h3').text("what. the. fuck. who are you? are you jesus??").style('color', "white");
     }
-    center.append('h1').text("Your Politcal IQ Score is: " + Math.round(score, 2)).style('color', "white");
+    center.append('h1').text("Your Politcal IQ Score is: " + Number((score).toFixed(2))).style('color', "white");
     center.append('h3').text("This can be between 0 and 1. 1 is the best political score and 0 is the worst.").style('color', "white");
     center.append('h3').text("There's some extra info below. Thanks for playing!").style('color', "white");
 
