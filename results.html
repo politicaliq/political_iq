@@ -97,6 +97,7 @@
 	}
 	
 	center = d3.select('body').append('center')
+    table = center.append('table').attr('width',"90%").style('text-align','center')
 	svg = center.append('svg').attr('width',width).attr('height',height);
 	defs = svg.append('defs')
 	for(i = 0; i < 6; i++)
@@ -126,7 +127,6 @@
 		t = r(-side*data[i][0]/2000+side*data[i][1]/2000,size*(data[i][0]+data[i][1])/1000);
 		svg.append('circle').attr('r',datarad).attr('cx',t[0]).attr('cy',t[1]).attr('fill',"white").style('stroke','black');
 	}
-    table = center.append('table').attr('width',"90%").style('text-align','center')
     
     smart_data = []
     for (i = 0; i < 6; i+=3) {
@@ -144,7 +144,7 @@
     equality = smart_data[3][1]  // OUTCOME
     gov = smart_data[4][0]       // DEMOCRACY
     foreign = smart_data[5][2]   // GLOBALISM
-    score = [eco + freedom + culture + equality + gov + foreign] / 6 / 10.0;
+    score = [eco + freedom + culture + equality + gov + foreign] / 6 / 100.0;
     console.log([eco, freedom, culture, equality, gov, foreign]);
     console.log(score);
     // var xxx = d3.scaleLinear();
