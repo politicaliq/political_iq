@@ -110,7 +110,12 @@
 			array.splice(rn, 1)
 		}
         questionlist = shuffle(questionlist)
-        questionlist = questionlist.slice(0, 10)
+        if length == 0:
+            questionlist = questionlist.slice(0, 6)
+        else if length == 1:
+            questionlist = questionlist.slice(0, 36)
+        else:
+            console.log("what the FUCK did you do???")
         encoding = "qwertyuiopasdfghjklzxcvbnmEBAFCD"
 		lang = location.search.replace("?","").split("lang=")[1].split("&length=")[0];
 		width = window.innerWidth-150;
