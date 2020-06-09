@@ -124,7 +124,7 @@
     center = d3.select('body').append('center')
     
 
-    center.append('h1').text("Your IQ is: " + string(scale(score)))
+    center.append('h1').text("Your IQ is: " + scale(score));
     if (scale(score) < 90) {
         center.append('h3').text("wow... that's kinda low, sport");
     } else if (scale(score) < 100) {
