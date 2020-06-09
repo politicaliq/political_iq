@@ -135,8 +135,7 @@
 			if (i == 3) {
                 j = 2 - p;
             }
-           temp = data[i + j].slice();
-           smart_data.push(temp);
+            smart_data.push(data[i+j]);
         }
     }
     eco = smart_data[2][1]       // REGULATION 
@@ -145,7 +144,7 @@
     equality = smart_data[2][1]  // OUTCOME
     gov = smart_data[2][0]       // DEMOCRACY
     foreign = smart_data[2][2]   // GLOBALISM
-    score = [eco + freedom + culture + equality + gov + foreign] / 6 / 1000.0;
+    score = [eco + freedom + culture + equality + gov + foreign] / 6 / 10.0;
     console.log([eco, freedom, culture, equality, gov, foreign]);
     console.log(score);
     // var xxx = d3.scaleLinear();
