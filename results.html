@@ -1,7 +1,7 @@
 <html>
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63376867-5"></script>
+    <script async src="http://www.googletagmanager.com/gtag/js?id=UA-63376867-5"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -143,7 +143,7 @@
     equality = smart_data[2][1]  // OUTCOME
     gov = smart_data[2][0]       // DEMOCRACY
     foreign = smart_data[2][2]   // GLOBALISM
-    score = [eco + freedom + culture + equality + gov + foreign + score] / 6 / 1000.0
+    score = [eco + freedom + culture + equality + gov + foreign] / 6 / 1000.0
     console.log(smart_data);
     console.log(score) 
     var scale = d3.scale.linear().domain([0, 1]).range([80, 200]);
