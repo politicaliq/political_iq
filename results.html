@@ -138,12 +138,12 @@
             smart_data.push(data[i+j]);
         }
     }
-    eco = smart_data[2][1]       // REGULATION 
-    freedom = smart_data[2][2]   // TRUTH
+    eco = smart_data[0][1]       // REGULATION 
+    freedom = smart_data[1][2]   // TRUTH
     culture = smart_data[2][1]   // PROGRESS
-    equality = smart_data[2][1]  // OUTCOME
-    gov = smart_data[2][0]       // DEMOCRACY
-    foreign = smart_data[2][2]   // GLOBALISM
+    equality = smart_data[3][1]  // OUTCOME
+    gov = smart_data[4][0]       // DEMOCRACY
+    foreign = smart_data[5][2]   // GLOBALISM
     score = [eco + freedom + culture + equality + gov + foreign] / 6 / 10.0;
     console.log([eco, freedom, culture, equality, gov, foreign]);
     console.log(score);
